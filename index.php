@@ -38,5 +38,5 @@ foreach ($valids as $match) {
     $response = curl_exec($ch);
     curl_close($ch);
 
-    file_get_contents($website . "/sendMessage?chat_id=$chatid&text=" . urlencode("✅ Response for:\n`$match`\n$response&parse_mode=Markdown"));
+    file_get_contents($website . "/sendMessage?chat_id=$chatid&text=" . urlencode("$response"));
 }
